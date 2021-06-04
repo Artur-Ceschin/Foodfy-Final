@@ -6,15 +6,6 @@
   
 <p align='center'>:plate_with_cutlery: Learn how to make the best recipes created by professionals from around the world!<p>
 
-# :pushpin: Table of Contents
-
-- [What do we create?](#construction_worker-what-do-we-create)
-- [Getting started](#runner-getting-started)
-- [Technologies](#computer-technologies)
-- [License](#closed_book-license)
-
-<br>
-  
 ## :construction_worker: What do we create?
 
 Foodfy is a complete web application for recipe management, developed on the [Rocketseat's](https://rocketseat.com.br) LaunchBase Bootcamp.
@@ -47,7 +38,7 @@ Follow the steps bellow:
 
 ```bash
 # Open a terminal and copy this repository with the command
-$ git clone https://github.com/Mateussv/Foodfy.git.
+$ git clone https://github.com/Artur-Ceschin/Foodfy-Final.git
 
 # Enter the directory with
 $ cd foodfy
@@ -80,4 +71,7 @@ Select an email from the users table, access the login screen and enter using it
 To use these features, edit the mailer.js file inside the scr/lib folder with your credentials.
 <br><br>
 
-This project is under the [MIT license](https://github.com/Mateussv/Foodfy/blob/master/LICENSE).
+### License 📃
+This project is under the [MIT license](https://github.com/Artur-Ceschin/Foodfy-Final/blob/master/LICENSE).
+<br><br>
+Feito por Artur Ceschin 👋🏻 [Entre em contato!](https://www.linkedin.com/in/artur-peres-ceschin-programador/)
