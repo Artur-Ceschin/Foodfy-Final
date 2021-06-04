@@ -1,0 +1,90 @@
+{% extends './layout.njk' %}
+
+{%block content%}
+  <section>
+    <div class="show-recipe">
+      <h3>Receita: {{ recipe.title }}</h3>
+      <a href="/recipes">Voltar</a>
+    </div>
+
+    <div class="img-container recipe">
+      <div class="highlight">
+        {% if not recipe.files[0] %}
+          <img src="http://placehold.it/500x500?text=PRODUTO SEM FOTO">
+          {% else %}
+            <img 
+              src="{{ recipe.files[0].path }}"
+              alt="Image of {{ recipe.files[0].name }}"
+              onclick="Lightbox.open()"
+            >
+        {% endif %}
+
+        <div class="lightbox-target">
+          <img src="{{recipe.files[0].path}}" alt="{{recipe.files[0].name}}">
+          <a
+            href="#"
+            class="lightbox-close"
+            onclick='Lightbox.close()''
+          >
+            <i class="material-icons">close</i>
+          </a>
+        </div>
+      </div>
+
+      <div class=gallery-preview>
+        {% for image in recipe.files %}
+          <img 
+            src="{{image.path}}"
+            alt="{{image.name}}"
+            {% if loop.index0 == 0 %} class='active' {% endif %}
+            onclick='ImageGallery.setImage(event)'>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="recipe-infos">
+    <div class="title">
+      <h2>{{ recipe.title }}</h2>
+      <div>
+      <a href="/chefs/{{ recipe.chef_id }}">por {{ recipe.chef_name }}</a>
+     </div>
+    </div>
+
+    <div class="recipe-contents ingredients">
+      <div class="ingredients">
+        <h3>Ingredientes</h3>
+        <a class="card-hide" onclick="buttonActions.toggleButton(event)">esconder</a>
+      </div>
+
+      <div>
+        <div class="recipe-steps">
+        {% for ingredients in recipe.ingredients %}
+          <p>- {{ ingredients }}</li>
+          {% endfor%}
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-contents preparation">
+      <div class="preparation">
+        <h3>Preparação</h3>
+        <a class="card-hide">esconder</a>
+      </div>
+
+      <div>
+        <div class="recipe-steps">
+          {% for steps in recipe.preparation %}
+            <p>- {{ steps }}</li>
+            {% endfor%}
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-contents information">
+      <h3>Informações adicionais</h3>
+      <a class="card-hide">esconder</a>
+      <p class="recipe-steps text">{{ recipe.information }}</p>
+    </div>
+  </section>
+{%endblock%}

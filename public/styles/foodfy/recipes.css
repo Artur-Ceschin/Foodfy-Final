@@ -1,0 +1,257 @@
+:root {
+  --primary-color: #6558c3;
+
+  --primary-hover-color: #f1efff;
+  --secundary-hover-color: #df4a33;
+}
+
+#recipes {
+  max-width: 94rem;
+  min-height: 80vh;
+  margin: auto;
+  padding-bottom: 4%;
+  position: relative;
+}
+
+#recipes h2 {
+  margin-bottom: -2%;
+}
+
+#cards {
+  max-width: 94rem;
+  margin: 6.5vh auto;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.1%;
+}
+
+.recipe-card {
+  cursor: pointer;
+  margin-bottom: 2.0rem;
+}
+
+.recipe-card img {
+  border-radius: 1.5rem;
+  width: 28rem;
+  height: 14rem;
+  object-fit: cover;
+}
+
+.recipe-card img:hover {
+  opacity: 0.7;
+}
+
+.recipe-card h3 {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  font-weight: 400;
+  margin-bottom: 2%;
+  margin-top: 4%;
+}
+
+.recipe-card p {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 3%;
+  color: #777777;
+}
+
+/* SHOW RECIPE */
+
+.show-recipe {
+  max-width: 94rem;
+  margin: 6.5vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.show-recipe h3 {
+  color: #111111;
+  font-size: 2.0rem;
+  line-height: 2.4rem;
+}
+
+.show-recipe a {
+  width: 9.1rem;
+  height: 3.7rem;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  border-radius: 4px;
+  text-align: center;
+  padding: 9px;
+}
+
+.show-recipe a:hover {
+  background-color: #f1efff;
+  transition: ease-in-out 150ms;
+}
+
+.img-container.recipe {
+  max-width: 94rem;
+  margin: 24px auto 40px auto;
+}
+
+.img-container.recipe img {
+  width: 94rem;
+  height: 28rem;
+  border-radius: 1.5rem;
+}
+
+.recipe-infos .title h2 {
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 8px;
+}
+
+.recipe-infos .title div:last-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-infos .title a {
+  color: #777777;
+  font-size: 2rem;
+  margin-bottom: 4%;
+  margin-top: 4px;
+}
+
+.recipe-infos .title a:hover {
+  color: #1f1717;
+}
+
+.recipe-infos {
+  max-width: 94rem;
+  margin: 3% auto;
+}
+
+.recipe-infos h2 {
+  text-align: center;
+  font-size: 3.6rem;
+}
+
+.recipe-infos p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #444444;
+  margin-top: 1.6%;
+}
+
+.recipe-infos h3 {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  margin-right: 1%;
+  margin-bottom: 3%;
+  display: inline-block;
+}
+
+.recipe-contents a {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #999999;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.recipe-contents a:hover {
+  color: var(--secundary-hover-color);
+}
+
+.recipe-infos .recipe-steps {
+  margin-top: -2%;
+  margin-bottom: 4%;
+}
+
+.recipe-steps p {
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+  color: #444444;
+}
+
+.recipe-steps.text {
+  margin-top: -0.5%;
+  line-height: 3rem;
+  margin-left: 1.2rem;
+}
+
+.recipe-steps.hide {
+  display: none;
+  margin-bottom: 4%;
+}
+
+.img-container .highlight > img {
+  cursor: zoom-in;
+}
+
+.img-container .gallery-preview { 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 1.0rem;
+  max-width: 94rem;
+  flex-wrap: wrap;
+}
+
+.img-container .gallery-preview img {
+  height: 5rem;
+  width: 5rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.img-container .gallery-preview img:hover,
+.img-container .gallery-preview img.active {
+  opacity: 1.0;
+  transition: 100ms ease-in;
+}
+
+/* LIGHTBOX */
+
+.highlight .lightbox-target {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  z-index: 100;
+  left: 0;
+  top: -100%;
+  opacity: 0;
+  transition: 400ms;
+}
+
+.highlight .lightbox-target img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.highlight a.lightbox-close {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  right: 0rem;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 400ms;
+}

@@ -1,0 +1,366 @@
+/* GENERAL STYLE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #111111;
+  margin: 0vh auto;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h3 {
+  color: #111111;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+h2,
+span {
+  margin: 6.5vh auto;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: #111111;
+  max-width: 94rem;
+
+}
+
+/* INDEX CHEFS */
+
+.chefs-header{
+  max-width: 94rem;
+  margin: 6.5vh auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chefs-header a {
+  width: 13.9rem;
+  height: 3.7rem;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chefs-header a:hover{
+  background-color: var(--primary-hover-color);
+  transition: ease-in-out 150ms;
+}
+
+header .is-admin {
+  color: WHITE;
+  font-size: 1.4rem;
+  padding: 0.8rem 0.8rem;
+  border-radius: 0.4rem;
+  background-color: var(--primary-color);
+}
+
+#chefs-container {
+  max-width: 94rem;
+  margin: 5vh auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3.2rem;
+}
+
+#chefs-container #chef-card {
+  max-width: 94rem;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 6.4rem 1fr;
+  gap: 7%;
+  cursor: pointer;
+}
+
+#chefs-container #chef-card img {
+  border-radius: 50%;
+  width: 6.4rem;
+  height: 6.4rem;
+  box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 grey;
+  object-fit: cover;
+}
+
+#chefs-container #chef-card img:hover{
+  opacity: 0.7;
+}
+
+#chefs-container #chef-card div h3 {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  font-weight: 400;
+  margin-bottom: 1.0rem;
+  color: #111111;
+}
+
+#chefs-container #chef-card a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #6558c3;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+#chefs-container #chef-card div a:hover {
+  color: #8579e0;
+  transition: ease-in-out 150ms;
+}
+
+/* CREATE CHEF */
+
+.fields-container {
+  max-width: 94rem;
+  margin: 0vh auto;
+}
+
+.create-chef {
+  margin: 6.5vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fields-container button {
+  width: 13.9rem;
+  height: 3.7rem;
+  cursor: pointer;
+  background-color: #6558c3;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.fields-container button:hover {
+  background-color: #8579e0;
+  transition: ease-in-out 150ms;
+}
+
+.fields-container p {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.fields-container input {
+  display: block;
+  border: 1px solid #dddddd;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 3rem;
+  padding: 16px 20px;
+  outline: none;
+}
+
+
+/* SHOW CHEF */
+
+.show-chef {
+  max-width: 94rem;
+  margin: 6.5vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.show-chef a {
+  width: 13.9rem;
+  height: 3.7rem;
+  cursor: pointer;
+  background-color: #6558c3;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  border-radius: 4px;
+  text-align: center;
+  padding: 9px;
+}
+
+.show-chef a:hover {
+  background-color: #8579e0;
+  transition: ease-in-out 150ms;
+}
+
+.img-container.chef {
+  max-width: 94rem;
+  margin: 24px auto 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container.chef img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chef-infos {
+  max-width: 94rem;
+  margin: 3% auto;
+}
+
+.chef-infos h2 {
+  text-align: center;
+  font-size: 3.6rem;
+}
+
+.chef-infos p {
+  font-size: 2.1rem;
+  line-height: 2.4rem;
+  color: #444444;
+  margin-top: 1.2%;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.chef-infos h3 {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  margin-top: 1%;
+  margin-right: 1%;
+  margin-bottom: 0%;
+  display: inline-block;
+}
+
+
+/* EDIT CHEF */
+
+.edit-chef {
+  max-width: 94rem;
+  margin: 6.5vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.edit-chef h3 {
+  margin-right: auto;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: #111111;
+  max-width: 94rem;
+  font-weight: bold;
+}
+
+.edit-chef button + button {
+  margin-left: 30px;
+}
+
+.edit-chef .delete-btn {
+  width: 9.2rem;
+  height: 3.7rem;
+  cursor: pointer;
+  background-color: #DC4747;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  border-radius: 4px;
+}
+
+.edit-chef .delete-btn:hover {
+  background-color: #f76e6e;
+  transition: ease-in-out 150ms;
+}
+
+.chef p:first-child {
+  margin-top: 3rem;
+}
+
+form .item #chef_uploadField {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 13.9rem;
+  height: 3.7rem;
+  border: 1px solid #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  margin-bottom: 2.4rem;
+}
+
+form .item #uploadInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+::-webkit-file-upload-button { cursor: pointer }
+
+form .item #avatar-preview {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 0.8rem;
+  width: 14.9rem;
+  margin: 8px 0;
+}
+
+form .item #avatar-preview img {
+  width: 14.9rem;
+  height: 14.9rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+#avatar-preview .photo {
+  position: relative;
+}
+
+#avatar-preview .photo i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  color: red;
+  width: 14.9rem;
+  height: 14.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 400%;
+  cursor: pointer;
+  opacity: 0;
+  transition: 350ms;
+}
+
+#avatar-preview .photo:hover i {
+  opacity: 1;
+}
+
+
+

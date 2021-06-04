@@ -1,0 +1,37 @@
+  <div id="header-container">
+    <header>
+      <nav>
+        <div>
+          <a href="/" class="logo"><img src="/assets/logo-admin.png" alt="logo"/></a>
+
+          <a name="drop" href="/admin/profile" class="nav-item">Minha conta</a>
+
+          <div class="drop-menu">
+            <a name="drop" href="/admin/recipes" class="nav-item">Receitas</a>
+          </div>
+
+          <div class="drop-menu">
+            <a name="drop" href="/admin/chefs" class="nav-item">Chefs</a>
+          </div>
+
+          <div class="drop-menu">
+            <a name="drop" href="/admin/users" class="nav-item">Usuários</a>
+          </div>
+        </div>
+
+        {% if session.userId and session.isAdmin %}
+          <div class="is-admin">
+            <p>ADMIN</p>
+          </div>
+        {% endif %}
+
+        <form id="logout" method="POST" action="/admin/users/logout">
+          <a
+            class="nav-item"
+            onclick="document.getElementById('logout').submit()">
+            Sair
+          </a>
+        </form>
+      </nav>
+    </header>
+  </div>

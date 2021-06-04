@@ -1,0 +1,25 @@
+<div class="header-container">
+  <header>
+    <nav>
+      <a href="/" class="logo"><img src="/assets/logo.png" alt="logo"/></a>
+      <a href="/about" class="nav-item">Sobre</a>
+      <a href="/recipes" class="nav-item">Receitas</a>
+      <a href="/chefs" class="nav-item">Chefs</a>
+      <a href="/admin/users/login" class="nav-item login-icon">
+        <i class="material-icons">account_circle</i>
+      </a>
+    </nav>
+
+    <div class="search-input">
+      <form action="/recipes" method="GET">
+        <input 
+          type="text" 
+          name="filter" 
+          placeholder="Buscar receita"
+          value="{{ filter }}"
+        >
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+</div>
